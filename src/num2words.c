@@ -2,41 +2,41 @@
 
 static const char* const ONES[] = {
   "",
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine"
+  "unu",
+  "du",
+  "tri",
+  "kvar",
+  "kvin",
+  "ses",
+  "sep",
+  "ok",
+  "nau"
 };
 
 static const char* const TEENS[] ={
   "",
-  "eleven",
-  "twelve",
-  "thirteen",
-  "four",
-  "fifteen",
-  "six",
-  "seven",
-  "eight",
-  "nine"
+  "dekunu",
+  "dekdu",
+  "dektri",
+  "dekkvar",
+  "dekkvin",
+  "dekses",
+  "deksep",
+  "dekok",
+  "deknau"
 };
 
 static const char* const TENS[] = {
   "",
-  "ten",
-  "twenty",
-  "thirty",
-  "forty",
-  "fifty",
-  "sixty",
-  "seventy",
-  "eighty",
-  "ninety"
+  "dek",
+  "dudek",
+  "tridek",
+  "kvardek",
+  "kvindek",
+  "sesdek",
+  "sepdek",
+  "okdek",
+  "naudek"
 };
 
 static const char* const MONTHS[] = {
@@ -44,24 +44,24 @@ static const char* const MONTHS[] = {
   "feb ",
   "mar ",
   "apr ",
-  "may ",
+  "maj ",
   "jun ",
   "jul ",
   "aug ",
   "sep ",
-  "oct ",
+  "okt ",
   "nov ",
   "dec "
 };
 
-static const char* STR_OH_CLOCK = "o'clock";
-static const char* STR_CLOCK = "clock";
-static const char* STR_NOON = "noon";
-static const char* STR_MID = "mid";
-static const char* STR_NIGHT = "night";
-static const char* STR_OH = "oh";
-static const char* STR_O = "o'";
-static const char* STR_TEEN = "teen";
+static const char* STR_OH_CLOCK = "horo";
+static const char* STR_CLOCK = "horo";
+static const char* STR_NOON = "tagmezo";
+static const char* STR_MID = "meze";
+static const char* STR_NIGHT = "nokto";
+static const char* STR_OH = "";
+static const char* STR_O = "'";
+static const char* STR_TEEN = "";
 
 static size_t append_number(char* words, int num) {
   int tens_val = num / 10;
@@ -134,8 +134,8 @@ void fuzzy_sminutes_to_words(struct tm *t, char* words) {
     remaining -= append_string(words, remaining, STR_CLOCK);
 
   if (10 < fuzzy_minutes && fuzzy_minutes < 20) {
-    if (fuzzy_minutes > 13 && 15 != fuzzy_minutes) {
-        strcat(words, STR_TEEN);
+//    if (fuzzy_minutes > 13 && 15 != fuzzy_minutes) {
+//        strcat(words, STR_TEEN);
       }
   } else if (fuzzy_minutes != 0 || (fuzzy_hours != 12 && fuzzy_hours != 0)) {
       remaining -= append_minutes_number(words, fuzzy_minutes);
