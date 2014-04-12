@@ -1,3 +1,10 @@
+Esperanto Words + Date Pebble Watchface
+=======================================
+
+Words + Date Pebble watchface in Esperanto.
+Forked from and based on: https://github.com/Dhertz/words-date-pebble-watchface
+
+
 words-date-pebble-watchface
 ===========================
 
