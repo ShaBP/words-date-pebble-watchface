@@ -59,8 +59,8 @@ static const char* STR_CLOCK = "horo";
 static const char* STR_NOON = "tagmezo";
 static const char* STR_MID = "meze";
 static const char* STR_NIGHT = "nokto";
-static const char* STR_OH = "";
-static const char* STR_O = "'";
+static const char* STR_OH = "kaj";
+static const char* STR_O = "kaj";
 static const char* STR_TEEN = "";
 
 static size_t append_number(char* words, int num) {
